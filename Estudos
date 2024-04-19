@@ -1,0 +1,10 @@
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+base64 -i public_key.pem > plubic_key-base64.txt     
+
+i --save-dev vitest unplugin-swc @swc/core @vitest/coverage-v8
+"types": [
+      "vitest/globals"
+    ]
